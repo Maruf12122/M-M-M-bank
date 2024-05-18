@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/MMM Bank.png">
+    <link rel="stylesheet" href="./stylesheet/default4.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="h-1-1 w-1-1">
+        <div class="h-1-1 w-1-1">
+            <form action="/find/find" method="post">
+                <input type="text" name="findname" placeholder="input your id....." class="h-5 w-1-2 ">
+                <input type="text" name="postid" placeholder="input your postid....." class="h-5 w-1-2 mt-2 ">
+                <input type="text" name="amount" placeholder="input your amount....." class="h-5 w-1-2 mt-2 ">
+                <button class="h-5 w-1-2 mt-2 fs-3">chang</button>
+            </form>
+        </div>
+        <div class="h-1-1 w-1-1 bg-red-500">
+            <% userff.forEach((post)=>{ %>
+                <div class="taka-pan bg-black-700 h-10 w-1-1 b-md s-w-10 c-white pt-2 pl-2 pr-2 mt-3 d-flex gap-10 j-s-between">
+                    <div class="d-flex gap-10">
+                        <h1>taka: <%=post.taka %> .00</h1>
+                        <h1>add taka: <%=post.amount %> .00</h1>
+                        <h1><%=post.number %></h1>
+                        <div>
+                            <h1><%=post._id %></h1>
+                            <h1><%=post.userid %></h1>
+                        </div>
+                        <h1><%=post.tnx %></h1>
+                    </div>
+                    <h1 class="c-green-700"><%=post.sp %></h1>
+                </div>
+            <% }) %>
+            
+        </div>
+    </main>
+</body>
+</html>

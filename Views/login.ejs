@@ -23,12 +23,12 @@
         <div class="login-page h-90 w-1-1 bg-black-700 d-flex">
             <div class="h-1-1 w-1-1 bg-black-700 pl-5 pt-5">
                 <h1 class="fs-7">login your email</h1>
-                <form action="" method="post">
+                <form action="/login/create" method="post">
                     <div>
-                        <input type="email" placeholder="Input your email...." class="w-1-2 h-5 pl-2 b-md d-out-none">
+                        <input type="email" name="email" placeholder="Input your email...." class="w-1-2 h-5 pl-2 b-md d-out-none">
                     </div>
                     <div>
-                        <input type="password" placeholder="Input your password...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2">
+                        <input type="password" name="password" placeholder="Input your password...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2">
                     </div>
                     <button class="w-1-2 h-5 mt-2 b-md bold-2-f fs-3">Login</button>
                 </form>
@@ -36,18 +36,18 @@
             <div class="h-1-1 w-5 bg-white"></div>
             <div class="h-1-1 w-1-1 bg-black-700 pl-5">
                 <h1 class="fs-7">sing up your account</h1>
-                <form action="" method="post" class="">
+                <form action="/sing-up/create" method="post" class="">
                     <div>
-                        <input type="text" placeholder="Input your username...." class="w-1-2 h-5 pl-2 b-md d-out-none">
+                        <input type="text" name="username" placeholder="Input your username...." class="w-1-2 h-5 pl-2 b-md d-out-none">
                     </div>
                     <div>
-                        <input type="number" placeholder="Input your number...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2 a-input">
+                        <input type="number" name="number" placeholder="Input your number...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2 a-input">
                     </div>
                     <div>
-                        <input type="email" placeholder="Input your email...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2">
+                        <input type="email" name="email" placeholder="Input your email...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2">
                     </div>
                     <div>
-                        <input type="password" placeholder="Input your password...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2">
+                        <input type="password" name="password" placeholder="Input your password...." class="w-1-2 h-5 pl-2 b-md d-out-none mt-2">
                     </div>
                     <button class="w-1-2 h-5 mt-2 b-md bold-2-f fs-3">Login</button>
                 </form>

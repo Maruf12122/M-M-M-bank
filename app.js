@@ -13,7 +13,7 @@ const user = require("./model/user");
 const post = require("./model/post")
 const { log } = require("console");
 const { fstat } = require("fs");
-
+const port = process.env.PORT || 3000
 // _____________vareval______________
 
 
@@ -110,9 +110,12 @@ app.get("/find",async(req,res)=>{
     res.render("findupdate",{userff})
 })
 app.post("/find/find", async (req,res)=>{
-    const userdatafind = await user.findOneAndUpdate({_id:req.body.findname},{taka:req.body.amount})
+    const fastfind = await user.findOne({_id:req.body.findname})
+    const taka_add = fastfind.taka + Number(req.body.amount)
+
+
+    const userdatafind = await user.findOneAndUpdate({_id:req.body.findname},{taka:taka_add})
     const postdatafind = await post.findOneAndUpdate({_id:req.body.postid},{sp:"successful"})
-    console.log(postdatafind);
     res.send(userdatafind)
 })
 
@@ -145,7 +148,10 @@ app.post("/send/send",islogin,async(req,res)=>{
 
 
 
-
+app.get("/logout",(req,res)=>{
+    res.cookie("userdit","");
+    res.redirect("/login")
+})
 
 
 
@@ -172,4 +178,4 @@ function islogin (req,res,next){
 
 
 
-app.listen(3000)
+app.listen(port)

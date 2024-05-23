@@ -90,7 +90,9 @@
 
 
 
-
+.bg-t{
+     background-color: transparent;
+}
 
 .c-black-h:hover{
      color: black;

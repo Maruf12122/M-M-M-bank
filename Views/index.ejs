@@ -19,7 +19,7 @@
                 <ul class="d-flex gap-10 mt-3 mr-5">
                     <li class="l-s-none"><button class="c-white fs-3 bg-black-700 pd-1 b-md b-none" id="add-taka-bt">add taka</button></li>
                     <li class="l-s-none"><a href="" class="atag c-white fs-3">৳ <%=userdata.taka %>.00</a></li>
-                    <li class="l-s-none"><a href="" class="atag c-white fs-3"><%= userdata.email %></a></li>
+                    <li class="l-s-none"><button class="c-white fs-3 bg-t pd-1 b-md b-none" id="add-profil-bt"><%=userdata.email %></button></li>
                 </ul>
             </nav>
         </div>
@@ -31,17 +31,27 @@
                 <div class="s-n w-40 h-1-1 bg-black-500">
                     <ul class="ml-2 mt-5">
                         <li class="l-s-none mt-3"><a href="" class="atag c-white fs-3">Home</a></li>
-                        <li class="l-s-none mt-3"><a href="" class="atag c-white fs-3">your taka</a></li>
-                        <li class="l-s-none mt-3"><button class="c-white fs-3 bold-2-f bg-tranc b-none" id="send-taka">send taka</button></li>
-                        <li class="l-s-none mt-3"><a href="" class="atag c-white fs-3" >add taka</a></li>
+                        <li class="l-s-none mt-3"><button class="c-white fs-3 bold-2-f bg-tranc b-none" id="your-taka-bt">your taka</button></li>
+                        <li class="l-s-none mt-3"><button class="c-white fs-3 bold-2-f bg-tranc b-none" id="send-taka">STTF</button></li>
+                        <li class="l-s-none mt-3"><button class="c-white fs-3 bold-2-f bg-tranc b-none" id="add-taka-bt2">ADD Taka</button></li>
                     </ul>
                     <div class="h-50"></div>
                     <h1 class="c-black  bg-green-700">৳ <%= userdata.taka %>.00</h1>
                 </div>
-
+                <!-- _____________profile__________ -->
+                <div id="profile" class="h-1-1 w-1-1 ml-10 d-none">
+                    <div class="h-22 w-22 bg-black-500 d-flex j-s-center a-i-center b-car over-h mb-5">
+                      <img src="https://static.vecteezy.com/system/resources/previews/007/407/996/non_2x/user-icon-person-icon-client-symbol-login-head-sign-icon-design-vector.jpg" alt="" class="b-car h-20 w-20">
+                    </div>
+                    <h1 class="mb-2"><span class="c-red-700">id: </span><%=userdata._id %></h1>
+                    <h1 class="mb-2"><span class="c-red-700">Name: </span><%= userdata.username %></h1>
+                    <h1 class="mb-2"><span class="c-red-700">Email: </span><%= userdata.email %></h1>
+                    <h1 class="mb-2"><span class="c-red-700">number: </span><%=userdata.number %></h1>
+                    <button class="h-5 w-20 bg-red-700 b-none b-md fs-3 bold-2-f" id="logout">logout</button>
+                </div>
 
                 <!-- home page start -->
-                <div id="Home" class="h-1-1 w-1-1 pd-10">
+                <div id="Home" class="h-1-1 w-1-1 pd-10 d-none">
 
                 
                     <% userdata.posts.forEach((post)=>{ %>
